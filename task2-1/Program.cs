@@ -1,6 +1,6 @@
 ﻿Console.Clear();
 Console.WriteLine("Введите трехзначное число: ");
-int a = int.Parse(Console.ReadLine());
+int a = Math.Abs(int.Parse(Console.ReadLine()));
 
 if (100 <= a && a <= 999)
 {

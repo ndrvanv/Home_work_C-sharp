@@ -71,14 +71,23 @@ void task_3()
     Console.Write("enter the number: ");
     int num = Math.Abs(Input());
     int count = 1;
-    while (count <= num)
+    if (num > 0)
     {
-        Console.Write(Math.Pow(count, 3));
-        if (count != num)
+        while (count <= num)
         {
-            Console.Write(", ");
+            Console.Write(Math.Pow(count, 3));
+            if (count != num)
+            {
+                Console.Write(", ");
+            }
+
+            count++;
         }
-        count++;
     }
+    else
+    {
+        Console.Write("Enter the number more the null!");
+    }
+
 }
 task_3();

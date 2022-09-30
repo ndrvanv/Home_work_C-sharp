@@ -100,12 +100,12 @@ PrintArray(array);
 SortArray(array);
 
 
-void FillArray(int[] array)
+void FillArray(int[] xyz)
 {
     Random randGenerator = new Random();
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < xyz.Length; i++)
     {
-        array[i] = randGenerator.Next(0, 9);
+        xyz[i] = randGenerator.Next(0, 9);
     }
 }
 
@@ -113,7 +113,10 @@ void PrintArray(int[] array)
 {
     for (int i = 0; i < array.Length; i++)
     {
-        Console.Write($"{array[i]}, ");
+      if (i < array.Length - 1)
+            Console.Write(array[i] + ", ");
+        else
+            Console.Write(array[i]);
     }
 }
 

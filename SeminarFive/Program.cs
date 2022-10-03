@@ -63,15 +63,15 @@
             void SortArrayTwo(double[] array) // Обработка не четных элементов массива
             {
                 double count = 0;
-                for (int i = 0; i < array.Length; i++)
+                for (int i = 1; i <= array.Length; i++)
                 {
-                    if (i % 2 == 0)
+                    if (i % 2 == 1)
                     {
                         count = array[i] + count;
                     }
                 }
                 Console.WriteLine();
-                Console.WriteLine(" Sum of elements:" + count);
+                Console.WriteLine("Sum of elements: " + count);
             }
 
             double[] FillArrayThree()     //Метод наполнения массива для второй задачи
@@ -120,7 +120,7 @@
                 SortArrayOne(array);
                 Console.ReadKey();
             }
-
+        
             void TaskTwo()
             {
                 /*Задача 36: Задайте одномерный массив, заполненный случайными числами. 
@@ -147,7 +147,7 @@
                 Difference(array);
                 Console.ReadKey();
             }
-
+        
             void Exit()
             {
                 Console.WriteLine("Bye!");
@@ -158,7 +158,7 @@
             // *************Выполнение команды*****************
 
             void Main()
-            {
+            {   
                 Console.Clear();
                 Console.WriteLine(" Для вывода задач набирайте числа от 1 до 3, а для выхода нажиме 4 \n *****************************************************************");
                 int num = Convert.ToInt32(Console.ReadLine());
@@ -180,7 +180,7 @@
                         Exit();
                         Console.ReadKey();
                         Console.Clear();
-                        break;
+                        break;            
                 }
             }
             Main();
